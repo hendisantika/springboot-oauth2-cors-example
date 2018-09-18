@@ -38,9 +38,9 @@ import java.util.UUID;
 @SpringBootApplication
 public class SpringbootOauth2CorsExampleApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootOauth2CorsExampleApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootOauth2CorsExampleApplication.class, args);
+    }
 }
 
 @Configuration
