@@ -56,7 +56,7 @@ class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("client1").secret("password")
+                .withClient("client1").secret("{noop}password")
                 .scopes("foo-scope")
                 .autoApprove(true)
                 .authorizedGrantTypes("implicit", "refresh_token", "password", "authorization_code")
@@ -152,7 +152,7 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("user1").password("password").authorities("right1");
+                .withUser("user1").password("{noop}password").authorities("right1");
     }
 
     @Bean
